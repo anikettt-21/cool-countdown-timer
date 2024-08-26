@@ -1,0 +1,157 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff5f6d, #ffc371);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    animation: backgroundAnimation 20s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(135deg, #ff5f6d, #ffc371);
+    }
+    25% {
+        background: linear-gradient(135deg, #ff9966, #ff5e62);
+    }
+    50% {
+        background: linear-gradient(135deg, #ff5e62, #f093fb);
+    }
+    75% {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+    100% {
+        background: linear-gradient(135deg, #43cea2, #185a9d);
+    }
+}
+
+
+.timer-container {
+    text-align: center;
+    background: raba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input[type="number"] {
+    padding: 12px;
+    width: 80px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #ffffff50;
+    border-radius: 30px;
+    text-align: center;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input::placeholder {
+    color: #ffffff90;
+}
+
+input:focus {
+    border-color: #ffffff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 0 10px #ffffff;
+    background: linear-gradient(135deg, #f5576c, #f093fb);
+}
+
+/* Buttons Container */
+.buttons-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Buttons Styling */
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+button:active {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+/* Pause Button Styling */
+#pauseBtn {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+#pauseBtn:hover {
+    background: linear-gradient(135deg, #f5576c, #f093fb);
+}
+
+/* Reset Button Styling */
+#resetBtn {
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+}
+
+#resetBtn:hover {
+    background: linear-gradient(135deg, #ff5e62, #ff9966);
+}
+
+/* Countdown Display */
+#countdown {
+    margin-top: 30px;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* Progress Bar Styling */
+.progress-bar {
+    margin-top: 20px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #61dafb;
+    width: 0;
+    transition: width 1s linear;
+}
+
